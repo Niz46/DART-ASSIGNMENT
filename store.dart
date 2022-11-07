@@ -1,4 +1,6 @@
-void main(List<String> args) {
+
+import 'dart:io';
+void main() {
   String firstName = "Favour";
   String lastName = "Nzeh";
   num height = 3;
@@ -17,4 +19,27 @@ void main(List<String> args) {
   print("My old age was $age years and it has being about 10 years to the old age since then");
   ageIncrease = age + 10;// This is the increament of age to ageIncrease
   print("My current age is now $ageIncrease years");
+
+  // To collect input from the user
+
+  print("\nEnter Your Name: ");
+  String? Name = stdin.readLineSync();
+
+  if(Name == ''){
+    print("Enter Your Name: ");
+    String? Name = stdin.readLineSync();
+  }
+  else{
+    print("Successful!!!!!");
+  }
+
+  print("\nEnter Your Age: ");
+  int? Age = int.parse(stdin.readLineSync()!);
+
+  if(Age == ''){
+    print("\nEnter Your Age: ");
+    int? Age = int.parse(stdin.readLineSync()!);
+  }else{
+    print("Successful!!!!!!");
+  }
 }
